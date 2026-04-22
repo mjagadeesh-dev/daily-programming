@@ -33,3 +33,13 @@ def rev(s,i,j):
 s=input("Enter a strinng:")
 result=rev(list(s),0,len(s)-1)
 print(" ".join(result))
+
+#File handling
+f1=open("file_1.txt","a+")
+f1.write("hello every one")
+f1.seek(0)
+print(f1.read())
+
+
+#data=f1.read()
+#print(data)
