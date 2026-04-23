@@ -95,3 +95,13 @@ def outter(ptr):
     return inner
 r=outter(main)
 r() 
+
+def natural_numbers(n):
+    i = 1
+    while i <= n:
+        yield i
+        i += 1
+
+# usage
+for num in natural_numbers(5):
+    print(num)
