@@ -37,3 +37,30 @@ m1.c.getCharger()
 print(m1.c.cbrand)
 del m1
 print(c1.cbrand)
+
+#composition and aggregation
+class Heart:
+    def __init__(self,s):
+        self.status=s
+    def heart(self):
+        print("Heart is beating")
+class Bike:
+    def __init__(self):
+        self.name="BMW"
+    def drift(self):
+        print("bike is drifting")
+class Person:
+    def __init__(self,status):
+        self.pName="Jagadeesh"
+        self.h=Heart(status)
+        self.c=""
+    def run(self,c):
+        print("person is running")
+        self.c=c
+b1=Bike()
+p1=Person("Beating")
+p1.run(b1)
+print(p1.h.status)
+p1.h.heart()
+print(p1.c.name)
+p1.c.drift()
